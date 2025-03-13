@@ -7,8 +7,6 @@ import Image from "next/image";
 
 export default function Home() {
 
-    const fruits = ["Banana","Maca","Pera"]
-
    const feacturesListCard =
        ["Gerencie todas as contas em um só lugar",
         "Reduza em até 60% os bloqueios","Painel organizado com todas as contas","Escale mais que os seus concorrentes"];
