@@ -13,7 +13,7 @@ const faqs = [
     },
     {
         question: "Essa ferramenta é unica no mundo?",
-        answer: "Sim o visionario Js fez a melhor ferramenta pra trabalhar com TikTokAds"
+        answer: "Sim"
     }
 ];
 
