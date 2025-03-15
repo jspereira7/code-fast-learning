@@ -3,14 +3,17 @@ import FAQ from "@/components /Faq";
 import HamburgerIcon from "@/components /HamburgerIcon";
 import FtHome from "@/components /FtHome";
 import Image from "next/image";
+import {auth} from "@/auth";
 
 
-export default function Home() {
+export default async function Home() {
+    const session = await auth()
 
    const feacturesListCard =
        ["Gerencie todas as contas em um só lugar",
         "Reduza em até 60% os bloqueios","Painel organizado com todas as contas","Escale mais que os seus concorrentes"];
 
+    
   return(
       <main>
           {/* HEADER */}
@@ -21,7 +24,7 @@ export default function Home() {
                   <a className="link link-hover" href="#faq">FAQ</a>
               </div>
               <div >
-                  <ButtonLogin />
+                  <ButtonLogin session={session} />
               </div>
               <div>
                   <HamburgerIcon />
@@ -32,7 +35,7 @@ export default function Home() {
               <div>
                   <h1 className="text-4xl font-extrabold mb-6" >Gerencie múltiplas contas do TikTok Ads sem dor de cabeça—tudo em um só lugar!</h1>
                   <div className="opacity-90 font-semibold text-gray-700 mb-5 py-3 mt-2"> A melhor ferramenta do mercado pra quem trabalha com tiktokads</div>
-                  <ButtonLogin/>
+                  <ButtonLogin session={session}/>
                   <Image src="/productDemo.jpeg" alt="productDemo" width={500}
                          height={300}  className="mx-96 rounded-xl object-cover object-center " />
               </div>
